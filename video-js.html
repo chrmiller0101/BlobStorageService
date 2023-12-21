@@ -1,0 +1,44 @@
+<head>
+  <link href="https://vjs.zencdn.net/8.6.0/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+<h1>MPEG-DASH Transcoded</h1>
+<p>The video https://imsstorage.blob.core.usgovcloudapi.net/videofilespub/test/output.mpd has been transcoded using FFmpeg into an HTTP Live Streaming (HLS) format.<br>FFmpeg is a free open-source software project for converting videos. The video is displayed using VIDEO JS an open source HTML5 player framework.</p>
+<p>VIDEO JS framwork is needed to display the video. Native HLS playback in the HTML5 video tag is supported on Safari for iOS and macOS. Native HLS is possible, but unreliable, on Android (4.2 or later). PC desktop browsers on Windows, Linux, and Mac (except Safari) do not allow native HLS playback in the video tag.</p>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="images/download.png"
+    data-setup="{}"
+  >
+    <source src="https://imsstorage.blob.core.usgovcloudapi.net/videofilespub/test/output.mpd" type="application/dash+xml" /> 
+    <!--source src="https://imsstorage.blob.core.usgovcloudapi.net/videofilespub/sample-mpeg.m3u8" type="application/dash+xml" /--> 
+    <!--source src="https://imsstorage.blob.core.usgovcloudapi.net/videofilespub/samplevideo.m3u8" type="application/x-mpegurl" /-->
+    <!--source src="MY_VIDEO.webm" type="video/webm" /-->
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+<ul>
+	<li>Video needs to be transcoded in code to a streaming format.</li>
+	<li>A framework like VIDEO JS needs to be used to support streaming for desktop browsers.</li>
+</ul> 
+  <script src="https://vjs.zencdn.net/8.6.0/video.min.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+  <script>
+/*   var player = videojs('my-video');
+   player.play();*/
+  </script> 
+</body>

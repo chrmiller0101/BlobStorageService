@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Azure Upload Demo</title>
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+
+.btn {
+  background-color: #e7e7e7;
+  font-size: 16px;
+  height: 20px;
+  width: 35px;
+  padding-top: 10px;
+
+} 
+
+</style>
+</head>
+<body bgcolor=white>
+
+<table border="0">
+<tr>
+<td>
+<img src="images/download.png">
+</td>
+<td>
+<h1>Azure Upload and Download</h1>
+<p>This is the home page for a sample application used to illustrate the
+upload and download of files using the Azure Blob Storage REST API.
+</td>
+</tr>
+</table>
+<br>
+<h2>Upload or Download a file:</h2>
+<p>Upload a video to the Azure Blob Storage imsstorage private container. The file is uploaded using the Azure Blob Storage REST API. <br>The API can be called using applications and languanges that can make HTTP requests, like Java or Javascript.</p>
+<form class="form-inline d-inline transisition" method="GET" action="AzureExample">
+            <div class="input-group">
+             <input class="form-control" type="search" id="type" name="type" placeholder="Upload">
+             <input class="form-control" type="search" id="azurename" name="azurename" placeholder="Azure filename">
+             <input class="form-control" type="search" id="filepath" name="filepath" placeholder="File Path">
+              <span class="input-group-btn">
+                <button title="upload" class="btn btn-primary" type="submit"><i class="fa fa-search fa-fw"></i></button>
+              </span>
+            </div>
+</form>
+<p>Download a video from the Azure Blob Storage imsstorage private container. The file is downloaded using the same REST API. <br>The file will be downloaded to a local directory.</p>
+
+<form class="form-inline d-inline transisition" method="GET" action="AzureExample">
+            <div class="input-group">
+             <input class="form-control" type="search" id="type" name="type" placeholder="Download">
+             <input class="form-control" type="search" id="azurename" name="azurename" placeholder="Azure filename">
+              <span class="input-group-btn">
+                <button title="download" class="btn btn-primary" type="submit"><i class="fa fa-search fa-fw" target="_blank"></i></button>
+              </span>
+            </div>
+</form>
+<br>
+
+<h2>Streaming and Non-Streaming Video:</h2> 
+
+<ul>
+<li>MPEG-4 (MP4) <a href="video-mp4.html" target="_blank">Video</a>. A MP4 video in the public container.</li> 
+<li>MPEG-DASH (MPD) <a href="video-js.html" target="_blank">Video</a>. A manually transcoded video in the public container.</li>
+<li>MPEG-4 (MP4) CDN <a href="video-cdn.html" target="_blank">Video</a>. A MP4 video in Azure CDN.</li>
+</ul>
+</body>
+</html>

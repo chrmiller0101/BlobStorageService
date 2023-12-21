@@ -1,0 +1,20 @@
+<head>
+  <link href="https://vjs.zencdn.net/8.6.0/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+<h1>MP4 Video Delivered from CDN</h1>
+<p>The video https://imsstorage.blob.core.usgovcloudapi.net/videofilespub/samplevideo.mp4 has not been transcoded.<br>The video is sent using the Azure Content Delivery Network (CDN).</p>
+<video width="640" height="264" controls="">
+<source src="https://imsmediaep.azureedge.us/videofilespub/samplevideo.mp4" type="video/mp4">
+</video>
+  <!--script src="https://vjs.zencdn.net/8.6.0/video.min.js"></script-->
+<ul>
+	<li>Transcoding and viewing frameworks are not necessary to view video on desktop browsers.</li>
+	<li>Backward and forward play.</li>
+	<li>CDN sends the video using servers that are closest to the user.</li>
+</ul>   
+</body>
